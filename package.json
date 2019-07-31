@@ -1,7 +1,7 @@
 {
   "name": "myapp",
   "version": "1.0.0",
-  "description": "A minimal Electron application written with Typescript",
+  "description": "A Electron application written with Typescript",
   "scripts": {
     "htmlcopy": "copyfiles -u 1 src/**/*.html dist",
     "csscopy": "copyfiles -u 1 src/**/*.css dist",
@@ -11,7 +11,7 @@
     "start": "npm run build && electron ./dist/app.js"
   },
   "author": "xDellTog",
-  "license": "CC0-1.0",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^2.0.2",
     "tslint": "^5.10.0",
