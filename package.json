@@ -3,16 +3,19 @@
   "version": "1.0.0",
   "description": "A minimal Electron application written with Typescript",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
+    "htmlcopy": "copyfiles -u 1 src/**/*.html dist",
+    "csscopy": "copyfiles -u 1 src/**/*.css dist",
+    "build": "npm run htmlcopy && npm run csscopy && tsc",
+    "watch": "npm run htmlcopy && npm run csscopy && tsc -w",
     "lint": "tslint -c tslint.json -p tsconfig.json",
-    "start": "npm run build && electron ./dist/main.js"
+    "start": "npm run build && electron ./dist/app.js"
   },
   "author": "xDellTog",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^2.0.2",
     "tslint": "^5.10.0",
-    "typescript": "^2.8.3"
+    "typescript": "^2.8.3",
+    "copyfiles": "2.1.1"
   }
 }
